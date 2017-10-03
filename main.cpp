@@ -21,6 +21,17 @@ int main()
     cout<<"Podaj liczbe wierszy: ";
     cin>>wiersze;
     cout<<endl;
+    if(wiersze<10)
+    {
+    	gotoxy(3,3);
+    	cout<<"Mala choinka"<<endl;
+	}
+	if(wiersze>10)
+    {
+    	gotoxy(3,3);
+    	cout<<"Duza choinka"<<endl;
+	}
+	
     wiersze=wiersze-1;
     gotoxy(x,y);
    for( int i = 0; i < wiersz; ++i ) 
@@ -31,13 +42,13 @@ int main()
 
 for(int i=0;i<wiersze;i++)
 {
-    wiersz=wiersz+2;
+    wiersz=wiersz+1; // zmniejszy³em wartoœæ zwiekszania siê iloœci znaków w ka¿dym wierszu
     x=x-1;
     y=y+1;
     gotoxy(x,y);
     for( int i = 0; i < wiersz; ++i )
     {
-    cout<<"*";
+    cout<<"* "; // doda³em drukowanie spacji po kazdej gwiazdce
     }
 }
 
